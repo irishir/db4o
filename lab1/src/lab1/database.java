@@ -1,4 +1,4 @@
-package lab1;
+﻿package lab1;
 
 /*import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;*/
@@ -16,17 +16,17 @@ public class database {
 			// db = Db4o.openFile("books.data");
 
 			Book war_and_peace = new Book("Война и мир", "Толстой", 1869, 1274);
-			Book eugene_onegin = new Book("������� ������", "������", 1825, 192);
-			Book dead_souls = new Book("������� ����", "������", 1842, 352);
-			Book anna = new Book("���� ��������", "�������", 1877, 850);
-			Book master_margo = new Book("������ � ���������", "��������", 1966, 448);
-			Book crime_and_punishment = new Book("������������ � ���������", "�����������", 1866, 331);
-			Book fathers_and_childrens = new Book("���� � ����", "��������", 1862, 191);
-			Book woe_from_wit = new Book("���� �� ���", "���������", 1828, 98);
-			Book cherry_orchard = new Book("�������� ���", "�����", 1903, 78);
-			Book childhood = new Book("�������", "�������", 1852, 112);
-			Book doctor_zhivago = new Book("������ ������", "���������", 1955, 544);
-			Book southpaw = new Book("�����", "������", 1881, 46);
+			Book eugene_onegin = new Book("Евгений Онегин", "Пушкин", 1825, 192);
+			Book dead_souls = new Book("Мертвые души", "Гоголь", 1842, 352);
+			Book anna = new Book("Анна Каренина", "Толстой", 1877, 850);
+			Book master_margo = new Book("Мастер и Маргарита", "Булгаков", 1966, 448);
+			Book crime_and_punishment = new Book("ПРеступление и наказание", "Достоевский", 1866, 331);
+			Book fathers_and_childrens = new Book("Отцы и дети", "Тургенев", 1862, 191);
+			Book woe_from_wit = new Book("Горе от ума", "Грибоедов", 1828, 98);
+			Book cherry_orchard = new Book("Вишневый сад", "Чехов", 1903, 78);
+			Book childhood = new Book("Детство", "Толстой", 1852, 112);
+			Book doctor_zhivago = new Book("Доктор Живаго", "Пастернак", 1955, 544);
+			Book southpaw = new Book("Левша", "Лесков", 1881, 46);
 
 			db.store(war_and_peace);
 			db.store(eugene_onegin);
@@ -44,7 +44,7 @@ public class database {
 			db.commit();
 
 			// Find all books of Tolstoy
-			ObjectSet<Book> book1 = db.queryByExample(new Book(null, "�������", 0, 0));
+			ObjectSet<Book> book1 = db.queryByExample(new Book(null, "Толстой", 0, 0));
 			while (book1.hasNext())
 				System.out.println(book1.next());
 		} finally {
