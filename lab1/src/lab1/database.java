@@ -15,18 +15,18 @@ public class database {
 		try {
 			// db = Db4o.openFile("books.data");
 
-			Book war_and_peace = new Book("Война и мир", "Толстой", 1869, 1274);
-			Book eugene_onegin = new Book("Евгений Онегин", "Пушкин", 1825, 192);
-			Book dead_souls = new Book("Мертвые души", "Гоголь", 1842, 352);
-			Book anna = new Book("Анна Каренина", "Толстой", 1877, 850);
-			Book master_margo = new Book("Мастер и Маргарита", "Булгаков", 1966, 448);
-			Book crime_and_punishment = new Book("Преступление и наказание", "Достоевский", 1866, 331);
-			Book fathers_and_childrens = new Book("Отцы и дети", "Тургенев", 1862, 191);
-			Book woe_from_wit = new Book("Горе от ума", "Грибоедов", 1828, 98);
-			Book cherry_orchard = new Book("Вишневый сад", "Чехов", 1903, 78);
-			Book childhood = new Book("Детство", "Толстой", 1852, 112);
-			Book doctor_zhivago = new Book("Доктор Живаго", "Пастернак", 1955, 544);
-			Book southpaw = new Book("Левша", "Лесков", 1881, 46);
+			Book war_and_peace = new Book("Р’РѕР№РЅР° Рё РјРёСЂ", "РўРѕР»СЃС‚РѕР№", 1869, 1274);
+			Book eugene_onegin = new Book("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", 1825, 192);
+			Book dead_souls = new Book("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", 1842, 352);
+			Book anna = new Book("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1877, 850);
+			Book master_margo = new Book("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1966, 448);
+			Book crime_and_punishment = new Book("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1866, 331);
+			Book fathers_and_childrens = new Book("пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1862, 191);
+			Book woe_from_wit = new Book("пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1828, 98);
+			Book cherry_orchard = new Book("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅ", 1903, 78);
+			Book childhood = new Book("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1852, 112);
+			Book doctor_zhivago = new Book("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 1955, 544);
+			Book southpaw = new Book("пїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ", 1881, 46);
 
 			db.store(war_and_peace);
 			db.store(eugene_onegin);
@@ -44,7 +44,7 @@ public class database {
 			db.commit();
 
 			// Find all books of Tolstoy
-			ObjectSet<Book> book1 = db.queryByExample(new Book(null, "Толстой", 0, 0));
+			ObjectSet<Book> book1 = db.queryByExample(new Book(null, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", 0, 0));
 			while (book1.hasNext())
 				System.out.println(book1.next());
 		} finally {
