@@ -44,8 +44,8 @@ public class Book {
 	}
 
 	public String toString() {
-		return "[Книга: " + "Название = " + bookName + "; " + "Автор = " + authorName + "; " + "Год публикации = "
-				+ year + "; " + "Количество страниц = " + page + "]";
+		return "[РљРЅРёРіР°: " + "РќР°Р·РІР°РЅРёРµ = " + bookName + "; " + "РђРІС‚РѕСЂ = " + authorName + "; " + "Р“РѕРґ РїСѓР±Р»РёРєР°С†РёРё = "
+				+ year + "; " + "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂР°РЅРёС† = " + page + "]";
 	}
 
 	public boolean equals(Object rhs) {
